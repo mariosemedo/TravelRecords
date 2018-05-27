@@ -26,7 +26,7 @@ namespace TravelRecords
             }
             else
             {
-
+                Navigation.PushAsync(new HomePage());
             }
 
 
