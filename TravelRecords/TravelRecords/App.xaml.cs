@@ -7,6 +7,8 @@ namespace TravelRecords
 {
 	public partial class App : Application
 	{
+        public static string DatabaseLocation = string.Empty;
+     
 		public App ()
 		{
 			InitializeComponent();
@@ -14,7 +16,17 @@ namespace TravelRecords
 			MainPage = new NavigationPage(new MainPage());
 		}
 
-		protected override void OnStart ()
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+
+            DatabaseLocation = databaseLocation;
+
+        }
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
