@@ -14,6 +14,10 @@ namespace TravelRecords
 		public MainPage()
 		{
 			InitializeComponent();
+
+            var assembly = typeof(MainPage);
+
+            iconImage.Source = ImageSource.FromResource("TravelRecords.Assets.Images.plane.png", assembly);
 		}
 
         private bool permissionRequested = false;
