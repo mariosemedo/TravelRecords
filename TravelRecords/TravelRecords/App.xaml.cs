@@ -1,3 +1,4 @@
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,8 +9,11 @@ namespace TravelRecords
 	public partial class App : Application
 	{
         public static string DatabaseLocation = string.Empty;
-     
-		public App ()
+
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+            "https://experiencerecords.azurewebsites.net");
+
+        public App ()
 		{
 			InitializeComponent();
 

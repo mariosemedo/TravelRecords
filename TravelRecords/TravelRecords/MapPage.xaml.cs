@@ -117,8 +117,8 @@ namespace TravelRecords
                     };
                     locationMap.Pins.Add(pin);
                 }
-                catch(NullReferenceException nre) { }
-                catch(Exception ex) { }
+                catch(NullReferenceException nre) { Console.Write(nre); }
+                catch(Exception ex) { Console.Write(ex); }
                 }
         }
 

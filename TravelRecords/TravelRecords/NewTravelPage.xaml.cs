@@ -47,7 +47,6 @@ namespace TravelRecords
                     Latitude = selectedVenue.location.lat,
                     Longitude = selectedVenue.location.lng,
                     VenueName = selectedVenue.name
-
                 };
 
                 using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
@@ -62,8 +61,8 @@ namespace TravelRecords
                         DisplayAlert("Failure", "Experience failed to be saved", "Ok");
                 }
             }
-            catch(NullReferenceException nre) { DisplayAlert("Failure :nre", "Experience failed to be saved", "Ok"); }
-            catch(Exception ex) { DisplayAlert("Failure :ex", "Experience failed to be saved ", "Ok"); }
+            catch(NullReferenceException nre) { Console.Write(nre); DisplayAlert("Failure :nre", "Experience failed to be saved", "Ok"); }
+            catch(Exception ex) { Console.Write(ex);  DisplayAlert("Failure :ex", "Experience failed to be saved ", "Ok"); }
         }
     }
 }
